@@ -1,0 +1,39 @@
+.questionPage {
+  display: flex;
+  height: 40em;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageFlex {
+  display: flex;
+  /* background-color: black; */
+}
+
+.pageNone {
+  display: none;
+}
+
+.questionBox {
+  height: 50%;
+  width: 80%;
+  background-color: aquamarine;
+  position: absolute;
+  text-align: center;
+}
+
+.question {
+  margin-top: 2em;
+}
+
+.answerButton {
+  height: 3em;
+  width: 15em;
+  margin: 10em;
+  border: 0;
+  background-color: burlywood;
+}
+
+.answerButton:hover {
+  color: red;
+}
