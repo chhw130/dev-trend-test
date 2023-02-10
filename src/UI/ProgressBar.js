@@ -2,6 +2,7 @@
 import styled from "styled-components";
 
 const ProgressBar = (props) => {
+  /** 상단 프로그레스바 */
   const barWidth = props.result;
 
   return (

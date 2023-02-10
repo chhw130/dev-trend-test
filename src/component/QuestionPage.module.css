@@ -2,7 +2,8 @@
   display: flex;
   height: 40em;
   justify-content: center;
-  align-items: center;
+
+  /* align-items: center; */
 }
 
 .pageFlex {
@@ -15,25 +16,44 @@
 }
 
 .questionBox {
-  height: 50%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
   background-color: aquamarine;
   position: absolute;
   text-align: center;
+  /* display: none; */
 }
 
+/* .questionBox :nth-child(1) {
+  background-color: red;
+} */
+
 .question {
-  margin-top: 2em;
+  margin: 10%;
+}
+
+.questionImg {
+  width: 30%;
+  height: 50%;
+  margin-top: 5%;
+  margin-bottom: 10px;
 }
 
 .answerButton {
   height: 3em;
   width: 15em;
-  margin: 10em;
   border: 0;
+  margin: 2em;
   background-color: burlywood;
 }
 
 .answerButton:hover {
   color: red;
+  background-color: purple;
+}
+
+.lists {
+  padding: 0;
+  height: 30px;
+  margin: 10em;
 }
