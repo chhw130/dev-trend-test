@@ -1,4 +1,3 @@
-// import styles from "./ProgressBar.module.css";
 import styled from "styled-components";
 
 const ProgressHeader = styled.header`
@@ -23,14 +22,14 @@ const Progress = styled.div`
   position: absolute;
 `;
 
-const ProgressBar = (props) => {
+const ProgressBar = ({ result, data }) => {
   /** 상단 프로그레스바 */
-  const barWidth = props.result;
+  const barWidth = result;
 
   return (
     <ProgressHeader>
       <ProgressContainer />
-      <Progress width={(barWidth / 10) * 100 + "%"} />
+      <Progress width={(barWidth / data.length) * 100 + "%"} />
     </ProgressHeader>
   );
 };

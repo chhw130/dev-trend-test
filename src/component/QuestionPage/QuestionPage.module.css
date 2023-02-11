@@ -24,7 +24,6 @@
   background-color: aquamarine;
   display: none;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 .questionBox:nth-child(1) {

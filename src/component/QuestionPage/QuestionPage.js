@@ -10,11 +10,6 @@ const QuestionPage = ({ data, tendencyData }) => {
   const [front, setFront] = useState(0);
   const [back, setBack] = useState(0);
 
-  /**상위 컴포넌트에 변경된 값 보내주기 */
-  useEffect(() => {
-    tendencyData(progress, front, back);
-  }, [progress, front, back]);
-
   /**답변 클릭시 로직 */
   function answerHandler({ target }) {
     const type = target.value;
@@ -33,6 +28,19 @@ const QuestionPage = ({ data, tendencyData }) => {
     questionData.style.display = "none";
     questionTest.style.display = "flex";
   }
+
+  /**쌓아준 답변데이터 객체로 만들어주기 */
+  const newAnswerData = {
+    progress: progress,
+    front: front,
+    back: back,
+  };
+
+  /**상위 컴포넌트에 변경된 값 보내주기 */
+  useEffect(() => {
+    tendencyData(newAnswerData);
+    return () => {};
+  }, [newAnswerData]);
 
   return (
     <>
