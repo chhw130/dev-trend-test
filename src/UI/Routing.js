@@ -1,12 +1,11 @@
 import ProgressBar from "./ProgressBar";
-import QuestionPage from "../component/QuestionPage";
+import QuestionPage from "../component/QuestionPage/QuestionPage";
 
-const Routing = (props) => {
-  // console.log(props);
+const Routing = ({ result, data, tendencyData }) => {
   return (
     <>
-      <ProgressBar result={props.result} />
-      <QuestionPage data={props.data} tendencyData={props.tendencyData} />
+      <ProgressBar result={result} />
+      <QuestionPage data={data} tendencyData={tendencyData} />
     </>
   );
 };

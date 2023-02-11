@@ -1,20 +1,6 @@
 // import styles from "./ProgressBar.module.css";
 import styled from "styled-components";
 
-const ProgressBar = (props) => {
-  /** 상단 프로그레스바 */
-  const barWidth = props.result;
-
-  return (
-    <ProgressHeader>
-      <ProgressContainer />
-      <Progress width={(barWidth / 10) * 100 + "%"} />
-    </ProgressHeader>
-  );
-};
-
-export default ProgressBar;
-
 const ProgressHeader = styled.header`
   position: fixed;
   top: 0;
@@ -36,3 +22,17 @@ const Progress = styled.div`
   width: ${(props) => props.width};
   position: absolute;
 `;
+
+const ProgressBar = (props) => {
+  /** 상단 프로그레스바 */
+  const barWidth = props.result;
+
+  return (
+    <ProgressHeader>
+      <ProgressContainer />
+      <Progress width={(barWidth / 10) * 100 + "%"} />
+    </ProgressHeader>
+  );
+};
+
+export default ProgressBar;
