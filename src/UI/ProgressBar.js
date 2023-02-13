@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import horse from "../Img/horse.png";
 
 const ProgressHeader = styled.header`
   position: fixed;
@@ -9,17 +10,38 @@ const ProgressHeader = styled.header`
 `;
 
 const ProgressContainer = styled.div`
-  width: 100%;
-  height: 8px;
-  background: #c6c6c6;
+  margin-top: 30px;
   position: absolute;
+  width: 70vw;
+  height: 3vh;
+  border-radius: 10px;
+  background-color: rgb(255, 212, 215);
+  left: 14.6%;
+  z-index: 99;
 `;
 
-const Progress = styled.div`
-  height: 8px;
-  background: purple;
-  width: ${(props) => props.width};
+const Progress = styled.span`
+  background: url(${horse});
+  background-size: 100% 100%;
+  height: 50px;
+  width: 40px;
+  border-radius: 5px;
+  left: ${(props) => props.width};
+  top: -1rem;
   position: absolute;
+  transition: all 0.6s ease-in-out 0s;
+
+  // background: purple;
+  // width: ${(props) => props.width};
+`;
+
+const ProgressImg = styled.p`
+  margin-top: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bolder;
+
+  color: white;
 `;
 
 const ProgressBar = ({ result, data }) => {
@@ -28,8 +50,11 @@ const ProgressBar = ({ result, data }) => {
 
   return (
     <ProgressHeader>
-      <ProgressContainer />
-      <Progress width={(barWidth / data.length) * 100 + "%"} />
+      <ProgressContainer>
+        <Progress width={(barWidth / data.length) * 100 + "%"}>
+          <ProgressImg>{barWidth}</ProgressImg>
+        </Progress>
+      </ProgressContainer>
     </ProgressHeader>
   );
 };
