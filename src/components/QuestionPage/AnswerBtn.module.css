@@ -1,0 +1,18 @@
+.answerButton {
+  height: 5em;
+  width: 20em;
+  border: 0;
+  margin: 0 1em 1em 1em;
+  background-color: burlywood;
+}
+
+.answerButton:hover {
+  color: red;
+  background-color: purple;
+}
+
+.answerImg {
+  height: 8em;
+  width: 15em;
+  margin: 0 1em 1em 1em;
+}
